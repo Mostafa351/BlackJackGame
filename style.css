@@ -1,12 +1,38 @@
+
 body{
-  font-family: Arial, Helvetica, sans-serif;
-}
-div{
-  text-align: center;
-  border: 1px red solid;
-}
-span{
-  display: inline-block;
-  padding-bottom: 20px;
   
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-image: url("./images/table.png");
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  font-weight: bold;
+}
+p{
+  color: white;
+}
+h1{
+  color: goldenrod;
+}
+#message-el{
+  font-style: italic;
+}
+button{
+  color: #016f32;
+  width: 150px;
+  padding: 5px 0px;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  background-color: goldenrod;
+  margin-bottom: 2px;
+  margin-top: 2px;
+
+}
+
+.winner{
+  color: #77eb8a;
+}
+.loser{
+  color: red;
 }
