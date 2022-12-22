@@ -1,3 +1,7 @@
+let player = {
+  name:"Mostafa",
+  chips: 145
+}
 let cards = [];
 let sum = 0;
 let hasBlackJack = false;
@@ -8,6 +12,11 @@ let sumEl = document.getElementById("sum-el");
 // get element using queryselector
 // let sumEl = document.querySelector("#sum-el")
 let cardsEl = document.getElementById("cards-el");
+
+
+let playerEl = document.getElementById("player-el");
+playerEl.textContent = `${player.name} : $${player.chips}`; 
+
 
 function getRandomCard(){
  let randy =  Math.floor(Math.random()*13 +1);
@@ -57,22 +66,18 @@ for (let i = 2; i < cards.length; i++) {
   messageEl.textContent =message;
 }
 
-function drawNewCard(){
-  if(isAlive && hasBlackJack === false){
-    newCard()
-  }
-}
+
 
 function newCard(){
   
-  if(sum < 22 ){
-    let newCard = getRandomCard();
-  cards.push(newCard);
-  sum += newCard;
-    renderGame();
-  }else{
-    messageEl.textContent = "Game Over";
+  if(isAlive && hasBlackJack === false){
+    if(sum < 22 ){
+      let newCard = getRandomCard();
+    cards.push(newCard);
+    sum += newCard;
+      renderGame();
+    }
+    sumEl.textContent = `Sum: ${sum}`;
   }
-  sumEl.textContent = `Sum: ${sum}`;
 }
 
